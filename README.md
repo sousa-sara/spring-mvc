@@ -9,7 +9,16 @@ O **Sistema de Consulta Médica** é uma aplicação **Spring MVC** desenvolvida
 - **Thymeleaf**  
 - **Jakarta Servlet (HttpSession)**  
 - **JPA & Hibernate**  
-- **Banco de Dados Oracle**  
+- **Banco de Dados Oracle**
+
+## ⚙️ Funcionalidades  
+✅ **Persistência de dados no login** (via CPF)
+
+✅ **Cadastro e consulta de pacientes** (via CPF)  
+
+✅ **Registro de consultas** (anamnese e prescrição)  
+
+✅ **Exibição do histórico médico** (anamnese e prescrição com formatação de data)
 
 ## 🛠️ Como Executar o Projeto  
 1. **Clone o repositório:**  
@@ -23,6 +32,14 @@ mvn spring-boot:run
 ```
 3. **Confirme a localização do projeto:**
 http://localhost:8080/
+
+4. **Login**:
+Para acessar o sistema, é necessário utilizar um CPF já cadastrado no banco de dados. Utilize o seguinte CPF de exemplo:
+
+📌 **CPF de teste**: 111.222.333-44
+
+5. **Fluxo**:
+Se o CPF do paciente já estiver cadastrado no sistema, será redirecionado diretamente para a página de Consulta Médica. Caso o CPF não seja encontrado na base de dados, o sistema encaminhará o usuário para a página de Cadastro de Novo Paciente. Após a conclusão do registro e seguindo as validações exigidas, será automaticamente direcionado para a Consulta Médica, permitindo a continuidade do atendimento. Após finalizado o atendimento, será direcionado para a página de login.
 
 ## 👥 Integrantes
 - Leonardo Oliveira - RM554024
